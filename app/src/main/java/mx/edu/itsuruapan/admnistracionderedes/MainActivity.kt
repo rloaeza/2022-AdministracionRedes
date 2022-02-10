@@ -11,7 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import mx.edu.itsuruapan.admnistracionderedes.databinding.ActivityMainBinding
 
-// Roberto Loaeza: telegram: 4521181954    t.me/rloaeza
+// Roberto Loaeza: telegram: 4521181954     t.me/rloaeza
 class MainActivity : AppCompatActivity() {
 //Miguel Morfin
     private lateinit var appBarConfiguration: AppBarConfiguration
