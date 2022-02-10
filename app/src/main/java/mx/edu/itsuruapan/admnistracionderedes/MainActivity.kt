@@ -13,7 +13,7 @@ import mx.edu.itsuruapan.admnistracionderedes.databinding.ActivityMainBinding
 
 // Roberto Loaeza
 class MainActivity : AppCompatActivity() {
-
+//Miguel Morfin
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
