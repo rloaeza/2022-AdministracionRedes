@@ -14,6 +14,7 @@ import mx.edu.itsuruapan.admnistracionderedes.databinding.ActivityMainBinding
 // Roberto Loaeza: telegram: 4521181954     t.me/rloaeza
 class MainActivity : AppCompatActivity() {
 //Miguel Morfin
+    //Alberto Losuna
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
