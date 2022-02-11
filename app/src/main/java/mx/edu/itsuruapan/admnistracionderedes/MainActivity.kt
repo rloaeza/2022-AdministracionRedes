@@ -15,6 +15,7 @@ import mx.edu.itsuruapan.admnistracionderedes.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 //Miguel Morfin
     //Alberto Losuna
+    //Carolina Pirita
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
