@@ -1,7 +1,6 @@
 package mx.edu.itsuruapan.admnistracionderedes;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class planesPreCor extends AppCompatActivity {
