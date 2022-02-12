@@ -7,8 +7,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="654dp"
-        android:layout_height="203dp"
+        android:layout_width="784dp"
+        android:layout_height="379dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,19 +20,20 @@
         <EditText
             android:id="@+id/editTextTextPersonName"
             android:layout_width="match_parent"
-            android:layout_height="69dp"
+            android:layout_height="180dp"
             android:ems="10"
+            android:hint="@string/usuario"
             android:inputType="textPersonName"
-            android:text="      Usuario:"
+            android:textColorHint="#78909C"
             android:textSize="48sp" />
 
         <EditText
             android:id="@+id/editTextTextPersonName2"
-            android:layout_width="261dp"
-            android:layout_height="85dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:ems="10"
+            android:hint="@string/contrasena"
             android:inputType="textPersonName"
-            android:text="Contraseña:"
             android:textSize="48sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
