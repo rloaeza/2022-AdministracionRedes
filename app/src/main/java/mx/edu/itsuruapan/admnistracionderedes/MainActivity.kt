@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 //Miguel Morfin
     //Alberto Losuna
     //Carolina Pirita
-    //Fonseca Cristian
+    //Cristian Fonseca
     //Fernando Eduardo
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
