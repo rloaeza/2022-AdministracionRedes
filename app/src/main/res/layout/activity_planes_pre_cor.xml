@@ -8,12 +8,31 @@
     android:layout_height="match_parent"
     tools:context=".planesPreCor">
 
+
+  <TextView
+      android:id="@+id/nombre_Planes"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="#4DFF9800"
+      android:fontFamily="casual"
+      android:text="@string/planes"
+      android:textAlignment="center"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      android:textColor="#0288D1"
+      android:textSize="34sp"
+      android:textStyle="bold"
+      tools:layout_editor_absoluteX="4dp"
+      tools:layout_editor_absoluteY="-3dp" />
+
   <com.google.android.material.textfield.TextInputLayout
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="32dp"
+      android:layout_marginTop="136dp"
+      android:backgroundTint="#799DF8C1"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.625"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent">
 
@@ -22,6 +41,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="none"
+        android:backgroundTint="#799DF8C1"
         android:text="Planes Preventivos y Correctivos" />
   </com.google.android.material.textfield.TextInputLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
