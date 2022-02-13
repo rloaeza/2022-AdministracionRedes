@@ -6,7 +6,7 @@
     android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".planesPreCor">
+    tools:context=".PlanesPreCor">
 
   <com.google.android.material.textfield.TextInputLayout
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -20,12 +20,11 @@
       app:layout_constraintTop_toTopOf="parent">
 
     <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView2"
+        android:id="@+id/autoCompleteTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/planes"
         android:inputType="none"
-        android:textSize="20sp"
-        android:textStyle="normal" />
+         />
   </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
