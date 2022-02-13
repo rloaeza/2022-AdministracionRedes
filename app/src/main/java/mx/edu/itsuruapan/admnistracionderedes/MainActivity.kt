@@ -45,9 +45,6 @@ class MainActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
 
-        val value = Intent(this, planesPreCor::class.java)
-        startActivity(value)
-        finish()
 
     }
 
