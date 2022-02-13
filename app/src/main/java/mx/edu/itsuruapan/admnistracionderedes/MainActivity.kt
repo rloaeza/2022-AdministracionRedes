@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     //Fernando Eduardo
     //Sergio Rosas
     //ISAAC NARANJO
+    //Josue Garcia
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
