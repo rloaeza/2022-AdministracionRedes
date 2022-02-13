@@ -5,21 +5,53 @@
     android:layout_width="match_parent"
     android:padding="16dp"
     android:layout_height="match_parent"
-    tools:context=".planesPreCor">
+    tools:context=".planesPreCor"
+    android:background="#8DFF9800"
+    android:backgroundTint="#8DFF9800">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="407dp"
+        android:layout_height="85dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </LinearLayout>
+    <TextView
+        android:id="@+id/nombre_planes"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#4DFF9800"
+        android:fontFamily="casual"
+        android:text="@string/planes"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#0288D1"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+<com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView"
-            android:layout_width="match_parent"
+            android:layout_width="337dp"
             android:layout_height="wrap_content"
-            android:inputType="none"
-            android:hint="Planes de prevencion y correccion" />
+            android:hint="Planes de prevencion y correccion"
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
