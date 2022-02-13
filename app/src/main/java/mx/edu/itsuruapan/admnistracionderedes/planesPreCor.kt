@@ -36,6 +36,6 @@ class planesPreCor : AppCompatActivity(), AdapterView.OnItemClickListener {
 
     override fun onItemClick(parent: AdapterView<*>?, viw: View?, position: Int, id: Long) {
       var  item = parent?.getItemAtPosition(position).toString()
-        Toast.makeText(this,item,Toast.LENGTH_SHORT)
+        Toast.makeText(this,item,Toast.LENGTH_SHORT).show()
     }
 }
