@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mx.edu.itsuruapan.admnistracionderedes" >
+    package="mx.edu.itsuruapan.admnistracionderedes">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AdmnistracionDeRedes" >
+        android:theme="@style/Theme.AdmnistracionDeRedes">
         <activity
             android:name=".planesPreCor"
             android:exported="false" />
@@ -16,7 +16,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AdmnistracionDeRedes.NoActionBar" >
+            android:theme="@style/Theme.AdmnistracionDeRedes.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
