@@ -69,7 +69,7 @@
         android:textSize="20sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="650dp" />
+        tools:layout_editor_absoluteY="647dp" />
 
     <Button
         android:id="@+id/boton_listar"
