@@ -13,10 +13,10 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <string-array name="planesPrevencion">
-        <item>uno</item>
-        <item>dos</item>
-        <item>tres</item>
-        <item>cuatro</item>
-        <item>cinco</item>
+        <item>pfuno</item>
+        <item>pfdos</item>
+        <item>pftres</item>
+        <item>pfcuatro</item>
+        <item>pfcinco</item>
     </string-array>
 </resources>

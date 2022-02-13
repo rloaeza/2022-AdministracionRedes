@@ -1,10 +1,13 @@
-plugins {
+ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
     compileSdk 32
+    buildToolsVersion "30.0.3"
+
+    buildFeatures{viewBinding true}
 
     defaultConfig {
         applicationId "mx.edu.itsuruapan.admnistracionderedes"
