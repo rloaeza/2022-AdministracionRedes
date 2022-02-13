@@ -5,11 +5,11 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
-    <string name="previous">Back</string>
+    <string name="previous">Atras</string>
     <string name="usuario">Usuario</string>
     <string name="contrasena">Password</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_first_fragment">Primer fragmento</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="listar">Listar</string>
     <string name="agregar">Agregar</string>
@@ -17,10 +17,10 @@
     <string name="fallas">FALLAS</string>
 
     <string-array name="planesPrevencion">
-        <item>uno</item>
-        <item>dos</item>
-        <item>tres</item>
-        <item>cuatro</item>
-        <item>cinco</item>
+        <item>pfuno</item>
+        <item>pfdos</item>
+        <item>pftres</item>
+        <item>pfcuatro</item>
+        <item>pfcinco</item>
     </string-array>
 </resources>
