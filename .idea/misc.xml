@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ISAAC/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_planes_pre_cor.xml" value="0.22" />
         <entry key="..\:/Users/Onlyr/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_planes_pre_cor.xml" value="0.32382246376811596" />
         <entry key="..\:/Users/Onlyr/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/login.xml" value="0.22" />
         <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
@@ -13,7 +14,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
