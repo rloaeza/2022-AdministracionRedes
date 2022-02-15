@@ -15,10 +15,15 @@
         android:theme="@style/Theme.AdmnistracionDeRedes">
         <activity
             android:name=".planesPreCor2"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
+
         <activity
             android:name=".Fallas"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".planesPreCor"
             android:exported="false" />
