@@ -44,7 +44,9 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-
+            val valor = Intent(this, planesPreCor2::class.java)
+            startActivity(valor)
+            finish()
 
     }
 

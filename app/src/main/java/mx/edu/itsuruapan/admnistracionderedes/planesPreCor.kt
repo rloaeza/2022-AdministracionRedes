@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import mx.edu.itsuruapan.admnistracionderedes.databinding.ActivityPlanesPreCorBinding
 
-class planesPreCor : AppCompatActivity(), AdapterView.OnItemClickListener {
+class PlanesPreCor : AppCompatActivity(), AdapterView.OnItemClickListener {
 
     private lateinit var binding : ActivityPlanesPreCorBinding
 
@@ -28,7 +28,7 @@ class planesPreCor : AppCompatActivity(), AdapterView.OnItemClickListener {
 
         with(binding.autoCompleteTextView){
             setAdapter(adapter)
-            onItemClickListener = this@planesPreCor
+            onItemClickListener = this@PlanesPreCor
 
         }
 
