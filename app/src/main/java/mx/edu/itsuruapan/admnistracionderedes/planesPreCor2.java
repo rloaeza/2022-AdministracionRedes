@@ -1,6 +1,5 @@
 package mx.edu.itsuruapan.admnistracionderedes;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,45 +8,83 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import androidx.appcompat.app.AppCompatActivity;
-import kotlin.Metadata;
+
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
 import kotlin.jvm.internal.Intrinsics;
-import mx.edu.itsuruapan.admnistracionderedes.databinding.ActivityPlanesPreCorBinding;
+import mx.edu.itsuruapan.admnistracionderedes.databinding.ActivityPlanesPreCor2Binding;
 import org.jetbrains.annotations.Nullable;
+import org.json.JSONObject;
 
-@Metadata(
-        mv = {1, 6, 0},
-        k = 1,
-        xi = 2,
-        d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\t\n\u0000\u0018\u00002\u00020\u00012\u00020\u0002B\u0005¢\u0006\u0002\u0010\u0003J\u0012\u0010\u0006\u001a\u00020\u00072\b\u0010\b\u001a\u0004\u0018\u00010\tH\u0014J0\u0010\n\u001a\u00020\u00072\f\u0010\u000b\u001a\b\u0012\u0002\b\u0003\u0018\u00010\f2\b\u0010\r\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u0012H\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082.¢\u0006\u0002\n\u0000¨\u0006\u0013"},
-        d2 = {"Lmx/edu/itsuruapan/admnistracionderedes/PlanesPreCor;", "Landroidx/appcompat/app/AppCompatActivity;", "Landroid/widget/AdapterView$OnItemClickListener;", "()V", "binding", "Lmx/edu/itsuruapan/admnistracionderedes/databinding/ActivityPlanesPreCorBinding;", "onCreate", "", "savedInstanceState", "Landroid/os/Bundle;", "onItemClick", "parent", "Landroid/widget/AdapterView;", "viw", "Landroid/view/View;", "position", "", "id", "", "Admnistracion_de_Redes.app"}
-)
-public final class planesPreCor2 extends AppCompatActivity implements OnItemClickListener {
 
-    private ActivityPlanesPreCorBinding binding;
+public final class planesPreCor2 extends AppCompatActivity implements OnItemClickListener, Response.Listener<JSONObject>, Response.ErrorListener {
+
+    private ActivityPlanesPreCor2Binding binding;
+    String item;
+    RequestQueue request;
+    JsonObjectRequest jsonObjectRequest;
+
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityPlanesPreCorBinding var10001 = ActivityPlanesPreCorBinding.inflate(this.getLayoutInflater());
+        ActivityPlanesPreCor2Binding var10001 = ActivityPlanesPreCor2Binding.inflate(this.getLayoutInflater());
         Intrinsics.checkNotNullExpressionValue(var10001, "ActivityPlanesPreCorBind…g.inflate(layoutInflater)");
         this.binding = var10001;
         var10001 = this.binding;
 
         this.setContentView(var10001.getRoot());
-        String[] var10000 = this.getResources().getStringArray(R.array.planesPrevencion);
-        String[] opciones = var10000;
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.list_pd,opciones);
-        ActivityPlanesPreCorBinding var7 = this.binding;
+        String[] opciones = this.getResources().getStringArray(R.array.planesPrevencion);
+        ArrayAdapter adapter = new ArrayAdapter(
+                this,
+                R.layout.list_pd,
+                opciones);
+        ActivityPlanesPreCor2Binding var7 = this.binding;
         if (var7 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
 
         AutoCompleteTextView var4 = var7.autoCompleteTextView;
         var4.setAdapter(adapter);
-        var4.setOnItemClickListener((OnItemClickListener)this);
+        var4.setOnItemClickListener(this);
     }
 
     public void onItemClick(@Nullable AdapterView parent, @Nullable View viw, int position, long id) {
-        String item = String.valueOf(parent != null ? parent.getItemAtPosition(position) : null);
-        Toast.makeText((Context)this, (CharSequence)item, 0).show();
+         item = String.valueOf(parent != null ? parent.getItemAtPosition(position) : null);
+        Toast.makeText(
+                this,
+                 item,
+                0
+        ).show();
+
+        if(item.equals("pftres")){
+            eliminar_plan();
+        }
+    }
+
+    public void eliminar_plan(){
+
+        String url = "https://aquarossnok.000webhostapp.com/biblioteca/eliminar_usuario.php?id_usuario=3";//sentencia que se ejecutara en el web service
+
+        request = Volley.newRequestQueue(getApplicationContext());
+        jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null , ResponseEliminar -> Toast.makeText(this, "Usuario eliminado", Toast.LENGTH_SHORT).show()
+                ,ErrorEliminar -> Toast.makeText(this, "Error durante el proceso", Toast.LENGTH_SHORT).show());//ejecucion de la sentencia
+        request.add(jsonObjectRequest);//obtencion de la respuesta por parte del web host (tiene que ser en formato json)
+
+    }
+
+    @Override
+    public void onResponse(JSONObject response) {
+
+    }
+
+    @Override
+    public void onErrorResponse(VolleyError error) {
+
     }
 }
