@@ -3,37 +3,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#222831"
+    >
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="784dp"
-        android:layout_height="379dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/ETgUser"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        android:backgroundTint="#FFC948"
+        android:textColorHint="#bbbbbb" />
+
+    <EditText
+        android:id="@+id/ETgPass"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETgUser"
+        android:backgroundTint="#FFC948"
+        android:textColorHint="#bbbbbb" />
+
+    <Button
+        android:id="@+id/BgIngresar"
+        android:layout_width="250dp"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/boton_redondeado"
+        android:onClick="MetodoIngresar"
+        android:text="Ingresar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETgPass" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="250dp"
+        android:layout_height="204dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375">
+        app:srcCompat="@drawable/user3" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:ems="10"
-            android:hint="@string/usuario"
-            android:inputType="textPersonName"
-            android:textColorHint="#78909C"
-            android:textSize="48sp" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName2"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:ems="10"
-            android:hint="@string/contrasena"
-            android:inputType="textPersonName"
-            android:textSize="48sp" />
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
