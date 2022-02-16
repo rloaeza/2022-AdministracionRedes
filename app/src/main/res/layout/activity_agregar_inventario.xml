@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".agregar_Inventario"
     android:background="#222831"
-    >
+    android:orientation="vertical"
+    tools:context=".agregar_Inventario">
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -25,13 +25,13 @@
 
         <EditText
             android:id="@+id/ETgId"
-            android:inputType="number"
             android:layout_width="180dp"
             android:layout_height="49dp"
             android:layout_marginLeft="25dp"
             android:backgroundTint="#FFC948"
             android:ems="10"
             android:hint="Ingrese ID"
+            android:inputType="number"
             android:textColor="#f9fcfb"
             android:textColorHint="#bbbbbb" />
 
@@ -58,16 +58,16 @@
             android:layout_marginTop="80dp"
             android:layout_weight="1"
             android:text="Nombre:"
-            android:textStyle="bold"
+            android:textColor="#FFC948"
             android:textSize="18dp"
-            android:textColor="#FFC948" />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/ETgNombre"
             android:layout_width="260dp"
             android:layout_height="49dp"
-            android:layout_marginRight="35dp"
             android:layout_marginTop="80dp"
+            android:layout_marginRight="35dp"
             android:backgroundTint="#FFC948"
             android:ems="10"
             android:hint="Nombre"
