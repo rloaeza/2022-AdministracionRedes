@@ -2,22 +2,19 @@ package mx.edu.itsuruapan.admnistracionderedes
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
-import mx.edu.itsuruapan.admnistracionderedes.databinding.ActivityMainBinding
+import androidx.appcompat.app.AppCompatActivity
+import com.android.volley.AuthFailureError
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 
 // Roberto Loaeza: telegram: 4521181954     t.me/rloaeza
 class MainActivity : AppCompatActivity() {
-//Miguel Morfin
+    //Miguel Morfin
     //Alberto Losuna
     //Carolina Pirita
     //Cristian Fonseca
@@ -25,50 +22,70 @@ class MainActivity : AppCompatActivity() {
     //Sergio Rosas
     //ISAAC NARANJO
     //Josue Garcia
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainBinding
+
+    //Declarar los objetos
+    private var ETUser: EditText? = null
+    private var ETPass: EditText? = null
+    //private val BIngresar: Button? = null
+
+    //private lateinit var appBarConfiguration: AppBarConfiguration
+    //private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        ETUser = findViewById<View>(R.id.ETgUser) as EditText
+        ETPass = findViewById<View>(R.id.ETgPass) as EditText
+    }
 
-        setSupportActionBar(binding.toolbar)
-
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+    //Método para validar usuarios
+    private fun validarUsuario(URL: String) {
+        val stringRequest: StringRequest = object : StringRequest(
+            Method.POST, URL,
+            Response.Listener { response ->
+                if (!response.isEmpty()) {
+                    val oth = Intent(applicationContext, Fallas::class.java)
+                    startActivity(oth)
+                } else {
+                    Toast.makeText(
+                        this@MainActivity,
+                        "Usuario o contraseña incorrecta",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            },
+            Response.ErrorListener { error ->
+                Toast.makeText(
+                    this@MainActivity,
+                    error.toString(),
+                    Toast.LENGTH_SHORT
+                ).show()
+            }) {
+            @Throws(AuthFailureError::class)
+            override fun getParams(): Map<String, String>? {
+                val parametros: MutableMap<String, String> = HashMap()
+                parametros["email"] = ETUser!!.text.toString()
+                parametros["contrasena"] = ETPass!!.text.toString()
+                return parametros
+            }
         }
-            val valor = Intent(this, planesPreCor2::class.java)
-            startActivity(valor)
-            finish()
-
+        val requestQueue = Volley.newRequestQueue(this)
+        requestQueue.add(stringRequest)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
+    //Metodo del boton, llama a validarUsuario()
+    fun MetodoIngresar(view: View?) {
+        //pasar los valores de ETUser y ETPass a variables
+        val User = ETUser!!.text.toString()
+        val Pass = ETPass!!.text.toString()
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
+        //Verifica que los campos tengan algun valor
+        if (User.length != 0 && Pass.length != 0) {
+            validarUsuario("https://softortilla.000webhostapp.com/Servicios/validarUsuario.php")
+        } //Llave del if
+        else {
+            Toast.makeText(this, "Ingrese usuario y contraseña", Toast.LENGTH_LONG).show()
         }
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
     }
 }
