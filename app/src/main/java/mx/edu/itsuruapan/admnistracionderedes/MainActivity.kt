@@ -14,7 +14,7 @@ import com.android.volley.toolbox.Volley
 
 // Roberto Loaeza: telegram: 4521181954     t.me/rloaeza
 class MainActivity : AppCompatActivity() {
-//Miguel Morfin
+    //Miguel Morfin
     //Alberto Losuna
     //Carolina Pirita
     //Cristian Fonseca
@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Puentes para asignar a ETUser y ETPass los que el usurio ingreso en la parte gráfica.
         ETUser = findViewById<View>(R.id.ETgUser) as EditText
         ETPass = findViewById<View>(R.id.ETgPass) as EditText
     }
