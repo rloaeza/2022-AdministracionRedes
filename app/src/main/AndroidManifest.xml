@@ -14,19 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdmnistracionDeRedes">
         <activity
+            android:name=".agregar_Inventario"
+            android:exported="false" />
+        <activity
             android:name=".registro"
             android:exported="false" />
         <activity
             android:name=".planesPreCor2"
             android:exported="false"
-            android:screenOrientation="portrait"
-            />
-
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Fallas"
             android:exported="false"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".planesPreCor"
             android:exported="false" />

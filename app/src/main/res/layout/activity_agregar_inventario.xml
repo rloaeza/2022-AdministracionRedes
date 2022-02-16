@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".agregar_Inventario"
+    android:background="#222831"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:text="Agregar nuevo articulo"
+        android:textColor="#FFC948"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ETgNombre"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:backgroundTint="#FFC948"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:textColor="#f9fcfb"
+        android:textColorHint="#bbbbbb"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"/>
+
+    <EditText
+        android:id="@+id/ETgDescripcion"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="#FFC948"
+        android:ems="10"
+        android:hint="Descripción"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#f9fcfb"
+        android:textColorHint="#bbbbbb" />
+
+    <EditText
+        android:id="@+id/ETgCantidad"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="#FFC948"
+        android:ems="10"
+        android:hint="Cantidad"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#f9fcfb"
+        android:textColorHint="#bbbbbb" />
+
+    <EditText
+        android:id="@+id/ETgCategoria"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="#FFC948"
+        android:ems="10"
+        android:hint="Categoría"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#f9fcfb"
+        android:textColorHint="#bbbbbb" />
+
+    <Button
+        android:id="@+id/BgRegistrar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boton_redondeado"
+        android:text="Registrar"
+        android:textColor="#393e46"
+        android:layout_marginTop="14dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

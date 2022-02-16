@@ -3,7 +3,6 @@ package mx.edu.itsuruapan.admnistracionderedes
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -45,8 +44,9 @@ class MainActivity : AppCompatActivity() {
             Method.POST, URL,
             Response.Listener { response ->
                 if (!response.isEmpty()) {
-                    val oth = Intent(applicationContext, Fallas::class.java)
+                    val oth = Intent(applicationContext, agregar_Inventario::class.java)
                     startActivity(oth)
+                    ETPass?.setText("");
                 } else {
                     Toast.makeText(
                         this@MainActivity,
