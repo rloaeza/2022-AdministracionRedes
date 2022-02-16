@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             Method.POST, URL,
             Response.Listener { response ->
                 if (!response.isEmpty()) {
-                    val oth = Intent(applicationContext, agregar_Inventario::class.java)
+                    val oth = Intent(applicationContext, menu::class.java)
                     startActivity(oth)
                     ETPass?.setText("");
                 } else {
