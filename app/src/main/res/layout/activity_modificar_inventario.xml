@@ -5,16 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".agregar_Inventario"
     android:background="#222831"
-    >
+    tools:context=".modificar_Inventario">
+
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="30dp"
-        android:text="Administrar inventario"
+        android:text="Buscar producto"
         android:textColor="#FFC948"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -63,7 +65,7 @@
             android:textColor="#FFC948" />
 
         <EditText
-            android:id="@+id/ETgNombre"
+            android:id="@+id/ETgNombre2"
             android:layout_width="260dp"
             android:layout_height="49dp"
             android:layout_marginRight="35dp"
@@ -96,7 +98,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/ETgDescripcion"
+            android:id="@+id/ETgCant2"
             android:layout_width="260dp"
             android:layout_height="49dp"
             android:layout_marginTop="14dp"
@@ -127,7 +129,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/ETgCantidad"
+            android:id="@+id/ETgPC2"
             android:layout_width="260dp"
             android:layout_height="49dp"
             android:layout_marginTop="14dp"
@@ -146,7 +148,7 @@
 
         <TextView
             android:id="@+id/VenT"
-            android:layout_width="98dp"
+            android:layout_width="70dp"
             android:layout_height="49dp"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="15dp"
@@ -158,7 +160,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/ETgCategoria"
+            android:id="@+id/ETgPV2"
             android:layout_width="260dp"
             android:layout_height="49dp"
             android:layout_marginTop="14dp"
@@ -192,23 +194,6 @@
             android:layout_marginLeft="10dp"
             android:background="@drawable/boton_redondeado"
             android:text="Editar"
-            android:textColor="#393e46" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp">
-
-        <Button
-            android:id="@+id/BgRegistrar"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="14dp"
-            android:background="@drawable/boton_redondeado"
-            android:text="Registrar"
             android:textColor="#393e46" />
     </LinearLayout>
 

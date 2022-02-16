@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdmnistracionDeRedes">
         <activity
+            android:name=".modificar_Inventario"
+            android:exported="false" />
+        <activity
             android:name=".agregar_Inventario"
             android:exported="false" />
         <activity
