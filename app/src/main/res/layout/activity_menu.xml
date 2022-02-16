@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222831"
+    tools:context=".menu">
+
+    <LinearLayout
+        android:layout_width="192dp"
+        android:layout_height="89dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="109dp"
+        android:background="@drawable/boton_redondeado"
+        tools:layout_editor_absoluteY="26dp"></LinearLayout>
+
+    <TextView
+        android:id="@+id/etMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:text="MENU"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <TextView
+        android:id="@+id/etErrores"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:text="Errores"
+        android:textColor="#FFC948"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <TextView
+        android:id="@+id/etLocalizacion"
+        android:layout_width="128dp"
+        android:layout_height="29dp"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:text="Localizacion"
+        android:textColor="#FFC948"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="253dp" />
+
+    <TextView
+        android:id="@+id/etInventario"
+        android:layout_width="133dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:text="Inventario"
+        android:textColor="#FFC948"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="350dp" />
+
+    <TextView
+        android:id="@+id/etPlaneacion"
+        android:layout_width="118dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:text="Planeacion"
+        android:textColor="#FFC948"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="452dp" />
+
+    <TextView
+        android:id="@+id/etConfiguracion"
+        android:layout_width="133dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:text="Configuracion"
+        android:textColor="#FFC948"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="554dp" />
+
+    <ImageView
+        android:id="@+id/imageError"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="TODO"
+        android:onClick="METODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMenu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/error" />
+
+    <ImageView
+        android:id="@+id/imageLocalizar"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="TODO"
+        android:onClick="METODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/localizar" />
+
+    <ImageView
+        android:id="@+id/imageInventario"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="TODO"
+        android:onClick="METODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/inventario" />
+
+    <ImageView
+        android:id="@+id/imagePlaneacion"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="TODO"
+        android:onClick="METODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/planeacion" />
+
+    <ImageView
+        android:id="@+id/imageConfig"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="544dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="TODO"
+        android:onClick="METODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/config" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
