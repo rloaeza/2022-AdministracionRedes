@@ -8,12 +8,17 @@
     tools:context=".menu">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="192dp"
         android:layout_height="89dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="109dp"
         android:background="@drawable/boton_redondeado"
-        tools:layout_editor_absoluteY="26dp"></LinearLayout>
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"></LinearLayout>
 
     <TextView
         android:id="@+id/etMenu"
@@ -28,18 +33,20 @@
         tools:layout_editor_absoluteX="138dp"
         tools:layout_editor_absoluteY="36dp" />
 
-    <TextView
-        android:id="@+id/etErrores"
-        android:layout_width="73dp"
-        android:layout_height="30dp"
-        android:layout_gravity="center"
-        android:layout_margin="30dp"
-        android:text="Errores"
-        android:textColor="#FFC948"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="160dp" />
+    <ImageView
+        android:id="@+id/imageConfig"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="TODO"
+        android:onClick="METODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.811"
+        app:srcCompat="@drawable/config" />
 
     <TextView
         android:id="@+id/etLocalizacion"
@@ -51,21 +58,12 @@
         android:textColor="#FFC948"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="253dp" />
-
-    <TextView
-        android:id="@+id/etInventario"
-        android:layout_width="133dp"
-        android:layout_height="31dp"
-        android:layout_gravity="center"
-        android:layout_margin="30dp"
-        android:text="Inventario"
-        android:textColor="#FFC948"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="350dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352" />
 
     <TextView
         android:id="@+id/etPlaneacion"
@@ -77,8 +75,106 @@
         android:textColor="#FFC948"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="452dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.671" />
+
+    <ImageView
+        android:id="@+id/imageError"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="TODO"
+        android:onClick="METODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.217"
+        app:srcCompat="@drawable/error"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageView
+        android:id="@+id/imageInventario"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:contentDescription="TODO"
+        android:onClick="METODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.512"
+        app:srcCompat="@drawable/inventario" />
+
+    <ImageView
+        android:id="@+id/imageLocalizar"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="30dp"
+        android:contentDescription="TODO"
+        android:onClick="METODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357"
+        app:srcCompat="@drawable/localizar" />
+
+    <TextView
+        android:id="@+id/etInventario"
+        android:layout_width="133dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:text="Inventario"
+        android:textColor="#FFC948"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.511" />
+
+    <ImageView
+        android:id="@+id/imagePlaneacion"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="TODO"
+        android:onClick="METODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.658"
+        app:srcCompat="@drawable/planeacion" />
+
+    <TextView
+        android:id="@+id/etErrores"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:text="Errores"
+        android:textColor="#FFC948"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.208" />
 
     <TextView
         android:id="@+id/etConfiguracion"
@@ -90,83 +186,11 @@
         android:textColor="#FFC948"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="554dp" />
-
-    <ImageView
-        android:id="@+id/imageError"
-        android:layout_width="96dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="30dp"
-        android:contentDescription="TODO"
-        android:onClick="METODO"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etMenu"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/error" />
-
-    <ImageView
-        android:id="@+id/imageLocalizar"
-        android:layout_width="96dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="30dp"
-        android:contentDescription="TODO"
-        android:onClick="METODO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/localizar" />
-
-    <ImageView
-        android:id="@+id/imageInventario"
-        android:layout_width="96dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="336dp"
-        android:layout_marginEnd="30dp"
-        android:contentDescription="TODO"
-        android:onClick="METODO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/inventario" />
-
-    <ImageView
-        android:id="@+id/imagePlaneacion"
-        android:layout_width="96dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="440dp"
-        android:layout_marginEnd="30dp"
-        android:contentDescription="TODO"
-        android:onClick="METODO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/planeacion" />
-
-    <ImageView
-        android:id="@+id/imageConfig"
-        android:layout_width="96dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="544dp"
-        android:layout_marginEnd="30dp"
-        android:contentDescription="TODO"
-        android:onClick="METODO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/config" />
+        app:layout_constraintVertical_bias="0.827" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

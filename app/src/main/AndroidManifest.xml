@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdmnistracionDeRedes">
         <activity
+            android:name=".configuracion"
+            android:exported="false" />
+        <activity
             android:name=".menu"
             android:exported="false" />
         <activity
