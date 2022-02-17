@@ -18,6 +18,10 @@
             android:name=".reportar"
             android:exported="false" />
         <activity
+            android:name=".planesPreventivos"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".agregar_Usuario"
             android:exported="false"
             android:screenOrientation="portrait" />
