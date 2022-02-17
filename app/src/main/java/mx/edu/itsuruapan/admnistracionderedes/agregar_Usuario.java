@@ -55,9 +55,9 @@ public class agregar_Usuario extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(getApplicationContext(), "Operación exitosa", Toast.LENGTH_SHORT).show();
-                //ETEmail.setText("");
-                //ETPass.setText("");
-                //ETPass2.setText("");
+                ETEmail.setText("");
+                ETPass.setText("");
+                ETPass2.setText("");
             }
         }, new Response.ErrorListener() {
             @Override
