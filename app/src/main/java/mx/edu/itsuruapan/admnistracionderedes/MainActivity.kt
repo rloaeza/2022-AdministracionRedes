@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun IrARegistrar(view: View?) {
-        val oth = Intent(applicationContext, registro::class.java)
+        val oth = Intent(applicationContext, agregar_Usuario::class.java)
         startActivity(oth)
     }
 }
