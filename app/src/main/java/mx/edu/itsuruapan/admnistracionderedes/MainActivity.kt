@@ -88,6 +88,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Ingrese usuario y contraseña", Toast.LENGTH_LONG).show()
         }
     }
+
     fun IrARegistrar(view: View?) {
         val oth = Intent(applicationContext, agregar_Usuario::class.java)
         startActivity(oth)
