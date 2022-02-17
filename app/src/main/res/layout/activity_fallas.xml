@@ -14,13 +14,14 @@
         android:background="#FFFFFF"
         android:backgroundTint="#FFFFFF"
         android:orientation="horizontal"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/nombre_fallas"
-            android:layout_width="0dp"
+            android:layout_width="25dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#222831"
@@ -49,7 +50,8 @@
 
         <TextView
             android:id="@+id/lista_fallas"
-            android:layout_width="0dp"
+            android:layout_width="25dp"
+            android:layout_gravity="center"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#72FBC603"
@@ -63,11 +65,11 @@
         android:layout_height="55dp"
         android:backgroundTint="@color/colorAccent"
         android:text="@string/agregar"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="20sp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="647dp" />
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="635dp" />
 
     <Button
         android:id="@+id/boton_listar"
@@ -79,7 +81,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="249dp"
-        tools:layout_editor_absoluteY="650dp" />
+        tools:layout_editor_absoluteX="250dp"
+        tools:layout_editor_absoluteY="635dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
