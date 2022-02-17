@@ -19,4 +19,9 @@ class menu : AppCompatActivity() {
         val oth = Intent(applicationContext, agregar_Inventario::class.java)
         startActivity(oth)
     }
+
+    fun IrA(view: View?) {
+        val oth = Intent(applicationContext, agregar_Inventario::class.java)
+        startActivity(oth)
+    }
 }
