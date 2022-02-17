@@ -14,9 +14,24 @@ class menu : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
 
     }
-
+    fun IrAFallas(view: View?) {
+        val oth = Intent(applicationContext, Fallas::class.java)
+        startActivity(oth)
+    }
+    fun IrALocalizacion(view: View?) {
+        val oth = Intent(applicationContext, localizacion::class.java)
+        startActivity(oth)
+    }
     fun IrAInventario(view: View?) {
         val oth = Intent(applicationContext, agregar_Inventario::class.java)
+        startActivity(oth)
+    }
+    fun IrAPlaneacion(view: View?) {
+        val oth = Intent(applicationContext, planesPreCor2::class.java)
+        startActivity(oth)
+    }
+    fun IrAConfiguracion(view: View?) {
+        val oth = Intent(applicationContext, configuracion::class.java)
         startActivity(oth)
     }
 }
