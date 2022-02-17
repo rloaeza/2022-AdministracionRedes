@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         val valor = Intent(this, recicler_planes::class.java)
         startActivity(valor)
-        finish()
+
     }
 
     //Método para validar usuarios
