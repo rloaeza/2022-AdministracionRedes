@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8DFF9800"
-    android:backgroundTint="#8DFF9800"
+    android:background="#222831"
     tools:context=".Fallas">
 
     <LinearLayout
@@ -24,12 +23,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#4DFF9800"
-            android:fontFamily="casual"
-            android:text="@string/fallas"
+            android:background="#222831"
+            android:text="Fallas"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#0288D1"
+            android:textColor="#FFC948"
             android:textSize="48sp"
             android:textStyle="bold" />
 
@@ -54,8 +52,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#5B8BC34A"
-            android:backgroundTint="#5B8BC34A"
+            android:background="#72FBC603"
             android:text="@string/cargando"
             android:textSize="20sp" />
     </LinearLayout>
@@ -64,7 +61,7 @@
         android:id="@+id/boton_agregar"
         android:layout_width="147dp"
         android:layout_height="55dp"
-        android:backgroundTint="#799DF8C1"
+        android:backgroundTint="@color/colorAccent"
         android:text="@string/agregar"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -76,7 +73,7 @@
         android:id="@+id/boton_listar"
         android:layout_width="143dp"
         android:layout_height="52dp"
-        android:backgroundTint="#799DF8C1"
+        android:backgroundTint="@color/colorAccent"
         android:text="@string/listar"
         android:textAlignment="center"
         android:textColor="@color/black"

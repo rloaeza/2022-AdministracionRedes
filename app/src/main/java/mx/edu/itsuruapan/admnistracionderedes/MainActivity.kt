@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             Method.POST, URL,
             Response.Listener { response ->
                 if (!response.isEmpty()) {
-                    val oth = Intent(applicationContext, agregar_Inventario::class.java)
+                    val oth = Intent(applicationContext, menu::class.java)
                     startActivity(oth)
                     ETPass?.setText("");
                 } else {
@@ -87,5 +87,10 @@ class MainActivity : AppCompatActivity() {
         else {
             Toast.makeText(this, "Ingrese usuario y contraseña", Toast.LENGTH_LONG).show()
         }
+    }
+
+    fun IrARegistrar(view: View?) {
+        val oth = Intent(applicationContext, agregar_Usuario::class.java)
+        startActivity(oth)
     }
 }

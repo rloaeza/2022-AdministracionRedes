@@ -5,8 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#222831"
-    tools:context=".registro">
+    tools:context=".agregar_Usuario">
 
+    <ImageView
+        android:id="@+id/imageViewUser"
+        android:layout_width="141dp"
+        android:layout_height="135dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082"
+        app:srcCompat="@drawable/registrarusuario" />
 
     <EditText
         android:id="@+id/ETgCorreo"
@@ -20,50 +34,50 @@
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#bbbbbb"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewUser"
+        app:layout_constraintVertical_bias="0.029" />
 
     <EditText
-        android:id="@+id/ETgPass"
+        android:id="@+id/ETgContrasena"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_height="48dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
+        android:autofillHints=""
         android:backgroundTint="#FFC948"
         android:ems="10"
-        android:hint="Contraseña"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
+        android:hint="Contrasena"
+        android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#bbbbbb"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETgCorreo" />
+        app:layout_constraintTop_toBottomOf="@+id/ETgCorreo"
+        app:layout_constraintVertical_bias="0.002" />
 
     <EditText
-        android:id="@+id/ETgConfirmPass"
+        android:id="@+id/ETgContrasena2"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_height="48dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
+        android:autofillHints=""
         android:backgroundTint="#FFC948"
         android:ems="10"
-        android:hint="Confirmar contraseña"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
+        android:hint="Confirmar Contrasena"
+        android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#bbbbbb"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETgPass" />
+        app:layout_constraintTop_toBottomOf="@+id/ETgContrasena"
+        app:layout_constraintVertical_bias="0.022" />
 
     <Button
         android:id="@+id/BgRegistro"
@@ -74,27 +88,14 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="60dp"
         android:background="@drawable/boton_redondeado"
-        android:onClick="MetodoIngresar"
+        android:onClick="IrARegistrar"
         android:text="Registrar"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETgConfirmPass" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="250dp"
-        android:layout_height="204dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:contentDescription="TODO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106"
-        app:srcCompat="@drawable/registro1" />
+        app:layout_constraintTop_toBottomOf="@+id/ETgContrasena"
+        app:layout_constraintVertical_bias="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
