@@ -52,7 +52,7 @@ public class agregar_Usuario extends AppCompatActivity {
             }
         });
     }
-
+//
     private void NuevoUsuario(String URL) {
         StringRequest stringRequest=new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
