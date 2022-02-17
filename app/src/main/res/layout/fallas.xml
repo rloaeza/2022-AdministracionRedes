@@ -1,87 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8DFF9800"
-    android:backgroundTint="#8DFF9800">
+    android:background="#222831"
+    android:orientation="vertical"
+    tools:context=".fallas">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:text="Fallas"
+        android:textColor="#FFC948"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="407dp"
-        android:layout_height="74dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FFFFFF"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+
+        android:id="@+id/linearLayout3"
+        android:layout_width="370dp"
+        android:layout_height="350dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:background="#2f3540">
 
         <TextView
-            android:id="@+id/nombre_fallas"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#4DFF9800"
-            android:fontFamily="casual"
-            android:text="@string/fallas"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#0288D1"
-            android:textSize="48sp"
+            android:id="@+id/compt"
+            android:layout_width="120dp"
+            android:layout_height="49dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="5dp"
+
+            android:gravity="center_vertical"
+            android:text="Cargando..."
+            android:textColor="#f9fcfb"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="376dp"
-        android:layout_height="534dp"
-        android:layout_marginTop="16dp"
-        android:layout_weight="1"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp">
 
-        <TextView
-            android:id="@+id/lista_fallas"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#5B8BC34A"
-            android:backgroundTint="#5B8BC34A"
-            android:text="@string/cargando"
-            android:textSize="20sp" />
+        <Button
+            android:id="@+id/boton_agregar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boton_redondeado"
+            android:text="Agregar"
+            android:textColor="#393e46" />
+
+        <Button
+            android:id="@+id/boton_listar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/boton_redondeado"
+            android:text="Listar"
+            android:textColor="#393e46" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/boton_agregar"
-        android:layout_width="147dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#799DF8C1"
-        android:text="@string/agregar"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="647dp" />
+</LinearLayout>
 
-    <Button
-        android:id="@+id/boton_listar"
-        android:layout_width="143dp"
-        android:layout_height="52dp"
-        android:backgroundTint="#799DF8C1"
-        android:text="@string/listar"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="249dp"
-        tools:layout_editor_absoluteY="650dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
