@@ -38,10 +38,6 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".planesPreCor2"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Fallas"
             android:exported="false"
             android:screenOrientation="portrait" />
@@ -64,6 +60,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".recycler_planes" />
     </application>
 
 </manifest>

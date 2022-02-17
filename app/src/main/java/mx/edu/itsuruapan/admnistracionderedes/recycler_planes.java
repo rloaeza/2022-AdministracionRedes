@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class recicler_planes extends AppCompatActivity {
+public class recycler_planes extends AppCompatActivity {
 
     ArrayList <ListaPlanes> elements;
     @Override

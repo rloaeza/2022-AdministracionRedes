@@ -37,8 +37,6 @@ class MainActivity : AppCompatActivity() {
         ETUser = findViewById<View>(R.id.ETgUser) as EditText
         ETPass = findViewById<View>(R.id.ETgPass) as EditText
 
-        val valor = Intent(this, recicler_planes::class.java)
-        startActivity(valor)
 
     }
 
