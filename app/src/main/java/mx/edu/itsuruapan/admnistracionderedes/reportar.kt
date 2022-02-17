@@ -5,13 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class configuracion : AppCompatActivity() {
+class reportar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_configuracion)
+        setContentView(R.layout.activity_reportar)
     }
-    fun IrAReportar(view: View?) {
-        val oth = Intent(applicationContext, reportar::class.java)
-        startActivity(oth)
-    }
+
 }

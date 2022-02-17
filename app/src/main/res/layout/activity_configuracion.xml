@@ -13,7 +13,7 @@
         android:layout_height="48dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/boton_redondeado"
-        android:onClick="MetodoIngresar"
+        android:onClick="IrAReportar"
         android:text="Reportar"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,37 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.341" />
 
-    <Button
-        android:id="@+id/BgRespaldo"
-        android:layout_width="250dp"
-        android:layout_height="48dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/boton_redondeado"
-        android:onClick="MetodoIngresar"
-        android:text="Respaldo"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
 
-    <Button
-        android:id="@+id/BgConsultarRespaldo"
-        android:layout_width="250dp"
-        android:layout_height="48dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/boton_redondeado"
-        android:onClick="MetodoIngresar"
-        android:text="Consultar Respaldo"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.651" />
 
     <LinearLayout
         android:id="@+id/linearLayout4"
