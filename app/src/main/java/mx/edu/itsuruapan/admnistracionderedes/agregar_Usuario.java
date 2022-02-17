@@ -43,13 +43,16 @@ public class agregar_Usuario extends AppCompatActivity {
             public void onClick(View v) {
                 //El if verifica que todos los edit Text tengan datos para poder proceder
                 if(ETEmail.length()!=0 & ETPass.length()!=0 & ETPass2.length()!=0){
-                    NuevoUsuario("https://softortilla.000webhostapp.com/Servicios/usuariosAlta.php");
+                    if(ETPass.getText().toString().equals(ETPass2.getText().toString()) ){
+                        NuevoUsuario("https://softortilla.000webhostapp.com/Servicios/usuariosAlta.php");
+                    }
+                    else{ Toast.makeText(getApplicationContext(),"Las contraseñas no coinciden",Toast.LENGTH_SHORT).show(); }
                 }
                 else{ Toast.makeText(getApplicationContext(),"Rellene todos los campos",Toast.LENGTH_SHORT).show(); }
             }
         });
     }
-
+//
     private void NuevoUsuario(String URL) {
         StringRequest stringRequest=new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override

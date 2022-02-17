@@ -29,7 +29,6 @@
         android:id="@+id/linearLayout4"
         android:layout_width="303dp"
         android:layout_height="85dp"
-        android:background="@drawable/boton_redondeado"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,8 +42,8 @@
             android:layout_height="42dp"
             android:layout_gravity="center"
             android:layout_margin="30dp"
-            android:text="CONFIGURACION"
-            android:textColor="@color/black"
+            android:text="Configuracion"
+            android:textColor="#FFC948"
             android:textSize="30sp"
             android:textStyle="bold" />
 

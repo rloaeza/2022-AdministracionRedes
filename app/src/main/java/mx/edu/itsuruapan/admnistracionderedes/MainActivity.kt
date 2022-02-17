@@ -36,6 +36,8 @@ class MainActivity : AppCompatActivity() {
 
         ETUser = findViewById<View>(R.id.ETgUser) as EditText
         ETPass = findViewById<View>(R.id.ETgPass) as EditText
+
+
     }
 
     //Método para validar usuarios
