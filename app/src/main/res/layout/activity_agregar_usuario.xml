@@ -34,10 +34,13 @@
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#bbbbbb"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewUser" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewUser"
+        app:layout_constraintVertical_bias="0.029" />
+
     <EditText
         android:id="@+id/ETgContrasena"
         android:layout_width="300dp"
@@ -50,10 +53,13 @@
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#bbbbbb"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETgCorreo" />
+        app:layout_constraintTop_toBottomOf="@+id/ETgCorreo"
+        app:layout_constraintVertical_bias="0.002" />
+
     <EditText
         android:id="@+id/ETgConfirmarContrasena"
         android:layout_width="300dp"
@@ -66,10 +72,13 @@
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#bbbbbb"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETgContrasena" />
+        app:layout_constraintTop_toBottomOf="@+id/ETgContrasena"
+        app:layout_constraintVertical_bias="0.022" />
+
     <Button
         android:id="@+id/BgRegistro"
         android:layout_width="250dp"
@@ -82,9 +91,11 @@
         android:onClick="MetodoIngresar"
         android:text="Registrar"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETgConfirmarContrasena" />
+        app:layout_constraintTop_toBottomOf="@+id/ETgConfirmarContrasena"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
