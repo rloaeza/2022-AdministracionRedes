@@ -28,7 +28,7 @@ class menu : AppCompatActivity() {
         startActivity(oth)
     }
     fun IrAPlaneacion(view: View?) {
-        val oth = Intent(applicationContext, planesPreCor2::class.java)
+        val oth = Intent(applicationContext, planesPreventivos::class.java)
         startActivity(oth)
     }
     fun IrAConfiguracion(view: View?) {
