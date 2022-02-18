@@ -1,8 +1,10 @@
 package mx.edu.itsuruapan.admnistracionderedes;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -89,8 +91,25 @@ public class agregar_Inventario extends AppCompatActivity {
         BEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ETid.length()!=0){ Eliminar("https://softortilla.000webhostapp.com/Servicios/bajaAlmacen.php?IdAlmacen="+ETid.getText().toString()); }
-                else{ Toast.makeText(getApplicationContext(),"Ingrese un ID",Toast.LENGTH_SHORT).show(); }
+                AlertDialog.Builder alerta = new AlertDialog.Builder(agregar_Inventario.this);
+                alerta.setMessage("¿Desea eliminar el articulo?")
+                        .setCancelable(false)
+                        .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int which) {
+                                if(ETid.length()!=0){ Eliminar("https://softortilla.000webhostapp.com/Servicios/bajaAlmacen.php?IdAlmacen="+ETid.getText().toString()); }
+                                else{ Toast.makeText(getApplicationContext(),"Ingrese un ID",Toast.LENGTH_SHORT).show(); }
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog titulo = alerta.create();
+                titulo.setTitle("Confirmar");
+                titulo.show();
             }
         });
     }

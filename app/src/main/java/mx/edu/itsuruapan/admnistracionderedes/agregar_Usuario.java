@@ -1,5 +1,6 @@
 package mx.edu.itsuruapan.admnistracionderedes;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -59,10 +60,11 @@ public class agregar_Usuario extends AppCompatActivity {
         StringRequest stringRequest=new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(getApplicationContext(), "Operación exitosa", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Usuario Registrado Exitosamente!", Toast.LENGTH_SHORT).show();
                 ETEmail.setText("");
                 ETPass.setText("");
                 ETPass2.setText("");
+                setContentView(R.layout.activity_main);
             }
         }, new Response.ErrorListener() {
             @Override
