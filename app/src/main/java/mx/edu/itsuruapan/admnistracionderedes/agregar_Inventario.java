@@ -34,6 +34,7 @@ public class agregar_Inventario extends AppCompatActivity {
     Button BEditar;
     Button BEliminar;
     Button BBuscar;
+    Button BNuevo;
     EditText ETNombre;
     EditText ETDescripcion;
     EditText ETCantidad;
@@ -52,12 +53,25 @@ public class agregar_Inventario extends AppCompatActivity {
         BEditar=(Button)findViewById(R.id.BgEditar);
         BEliminar=(Button)findViewById(R.id.BgEliminar);
         BBuscar=(Button)findViewById(R.id.BgBuscar);
+        BNuevo=(Button)findViewById(R.id.BgNuevo);
 
         ETNombre=(EditText)findViewById(R.id.ETgNombre);
         ETDescripcion=(EditText)findViewById(R.id.ETgDescripcion);
         ETCantidad=(EditText)findViewById(R.id.ETgCantidad);
         ETCategoria=(EditText)findViewById(R.id.ETgCategoria);
         ETid=(EditText)findViewById(R.id.ETgId);
+
+        BNuevo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ETid.setText("");
+                ETNombre.setText("");
+                ETCantidad.setText("");
+                ETDescripcion.setText("");
+                ETCategoria.setText("");
+                Toast.makeText(getApplicationContext(),"Ingrese los datos", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         BRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -181,6 +195,7 @@ public class agregar_Inventario extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Toast.makeText(getApplicationContext(), "El producto fue eliminado", Toast.LENGTH_SHORT).show();
+                ETid.setText("");
                 ETNombre.setText("");
                 ETCantidad.setText("");
                 ETDescripcion.setText("");
