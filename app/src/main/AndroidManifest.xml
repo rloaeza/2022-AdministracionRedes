@@ -16,42 +16,53 @@
         android:theme="@style/Theme.AdmnistracionDeRedes"
         ><activity
             android:name=".reportar"
-            android:exported="false" />
+            android:exported="false"
+        android:parentActivityName=".configuracion"/>
         <activity
             android:name=".planesPreventivos"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".menu"/>
         <activity
             android:name=".agregar_Usuario"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".configuracion"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".menu"/>
         <activity
             android:name=".menu"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".agregar_Inventario"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".menu"
+            />
         <activity
             android:name=".registro"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".Fallas"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".menu"/>
         <activity
             android:name=".localizacion"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:parentActivityName=".menu"/>
         <activity
             android:name=".planesPreCor"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".menu"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -64,7 +75,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".recycler_planes" />
+        <activity
+            android:name=".recycler_planes"
+            android:parentActivityName=".menu"/>
     </application>
 
 </manifest>

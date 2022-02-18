@@ -32,11 +32,13 @@ public class agregar_Usuario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_usuario);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         BRegistrar=(Button)findViewById(R.id.BgRegistro);
         ETEmail=(EditText)findViewById(R.id.ETgCorreo);
         ETPass=(EditText)findViewById(R.id.ETgContrasena);
         ETPass2=(EditText)findViewById(R.id.ETgContrasena2);
+
 
         BRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override

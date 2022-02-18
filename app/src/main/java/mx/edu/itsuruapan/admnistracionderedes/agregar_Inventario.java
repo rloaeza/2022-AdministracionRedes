@@ -44,6 +44,7 @@ public class agregar_Inventario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_inventario);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         BRegistrar=(Button)findViewById(R.id.BgRegistrar);
         BEditar=(Button)findViewById(R.id.BgEditar);

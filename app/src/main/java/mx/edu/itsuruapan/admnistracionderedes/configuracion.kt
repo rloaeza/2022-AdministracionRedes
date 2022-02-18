@@ -9,6 +9,7 @@ class configuracion : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_configuracion)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
     fun IrAReportar(view: View?) {
         val oth = Intent(applicationContext, reportar::class.java)

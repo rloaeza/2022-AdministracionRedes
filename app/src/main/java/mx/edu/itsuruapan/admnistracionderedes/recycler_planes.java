@@ -15,7 +15,7 @@ public class recycler_planes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recicler_planes);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         init();
     }
 
