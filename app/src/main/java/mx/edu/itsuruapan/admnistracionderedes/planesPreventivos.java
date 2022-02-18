@@ -30,11 +30,11 @@ public class planesPreventivos extends AppCompatActivity implements Response.Err
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planes_preventivos);
 
-        btn_insertar = findViewById(R.id.btn_agregar2);
+        btn_insertar = findViewById(R.id.btn_agregar);
         btn_editar = findViewById(R.id.btn_editar);
         btn_eliminar = findViewById(R.id.btn_eliminar);
-        nombre = findViewById(R.id.nom_planes4);
-        descripccion = findViewById(R.id.descrip_planes2);
+        nombre = findViewById(R.id.nom_planes);
+        descripccion = findViewById(R.id.descrip_planes);
 
         btn_insertar.setOnClickListener(v -> inserter_plan());
         btn_editar.setOnClickListener(v -> editer_plan());
