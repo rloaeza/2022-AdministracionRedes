@@ -37,7 +37,9 @@ class MainActivity : AppCompatActivity() {
         ETUser = findViewById<View>(R.id.ETgUser) as EditText
         ETPass = findViewById<View>(R.id.ETgPass) as EditText
 
-
+        val valor = Intent(this, recycler_planes::class.java )
+        startActivity(valor)
+        finish()
     }
 
     //Método para validar usuarios
