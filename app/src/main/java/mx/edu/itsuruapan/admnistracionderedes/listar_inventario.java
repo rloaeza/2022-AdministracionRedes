@@ -17,6 +17,7 @@ public class listar_inventario extends AppCompatActivity {
         setContentView(R.layout.activity_listar_inventario);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //creacion de botones
         BRListar=(Button) findViewById(R.id.BtnListar);
         ETUsuario=(EditText) findViewById(R.id.ETgUsuario);
     }
