@@ -30,7 +30,7 @@
         android:autofillHints=""
         android:backgroundTint="#FFC948"
         android:ems="10"
-        android:hint="Correo"
+        android:hint="Usuario"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#bbbbbb"

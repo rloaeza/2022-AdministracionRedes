@@ -13,56 +13,58 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AdmnistracionDeRedes"
-        ><activity
+        android:theme="@style/Theme.AdmnistracionDeRedes">
+        <activity
+            android:name=".listar_inventario"
+            android:exported="false" />
+        <activity
             android:name=".reportar"
             android:exported="false"
-        android:parentActivityName=".configuracion"/>
+            android:parentActivityName=".configuracion" />
         <activity
             android:name=".planesPreventivos"
             android:exported="false"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".agregar_Usuario"
             android:exported="false"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".configuracion"
             android:exported="false"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".menu"
             android:exported="false"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".agregar_Inventario"
             android:exported="false"
-            android:screenOrientation="portrait"
             android:parentActivityName=".menu"
-            />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".registro"
             android:exported="false"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Fallas"
             android:exported="false"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".localizacion"
             android:exported="false"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".planesPreCor"
             android:exported="false"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -77,7 +79,7 @@
         </activity>
         <activity
             android:name=".recycler_planes"
-            android:parentActivityName=".menu"/>
+            android:parentActivityName=".menu" />
     </application>
 
 </manifest>
