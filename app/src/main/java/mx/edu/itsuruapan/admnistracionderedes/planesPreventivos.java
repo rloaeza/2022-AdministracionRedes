@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -63,12 +64,14 @@ public class planesPreventivos extends AppCompatActivity implements Response.Err
     }*/
 
     private void inserter_plan() {
-        String url = "https://softortilla.000webhostapp.com/Servicios/insertarPlan.php?nombrePlan"+nombre.getText().toString()+"&descripcionPlan"+descripccion.getText().toString()+"&IdUsuario";//queda pendiente la variable de donde se obtendra el nombre de usuario
+        String url = "https://softortilla.000webhostapp.com/Servicios/insertarPlan.php?nombrePlan"+nombre.getText().toString()+"&descripcionPlan"+descripccion.getText().toString()+"&IdUsuario=Rossnok";//queda pendiente la variable de donde se obtendra el nombre de usuario
 
         url = url.replace(" ","%20");
 
         request = Volley.newRequestQueue(getApplicationContext());
-        jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url,null,this,this);
+        jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url,null,
+                Responseinserter -> Toast.makeText(this,"plan registrado", Toast.LENGTH_SHORT).show(),
+                Responseerror -> Toast.makeText(this,"error al registrar plan", Toast.LENGTH_SHORT).show());
         request.add(jsonObjectRequest);
 
     }

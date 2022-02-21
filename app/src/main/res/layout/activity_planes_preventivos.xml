@@ -46,13 +46,13 @@
         app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
+        <EditText
             android:id="@+id/nom_planes"
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_gravity="center"
             android:background="#FFF29E"
-            android:text="Nombre..."
+            android:hint="Nombre..."
             android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
@@ -69,13 +69,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
+        <EditText
             android:id="@+id/descrip_planes"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:background="#FFF29E"
-            android:text="Descripcion..."
+            android:gravity="start"
+            android:hint="Descripcion..."
             android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
