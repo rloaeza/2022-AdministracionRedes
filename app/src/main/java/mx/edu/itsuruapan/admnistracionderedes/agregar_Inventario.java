@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +36,7 @@ public class agregar_Inventario extends AppCompatActivity {
     Button BEliminar;
     Button BBuscar;
     Button BNuevo;
+    Button BListar;
     EditText ETNombre;
     EditText ETDescripcion;
     EditText ETCantidad;
@@ -54,6 +56,7 @@ public class agregar_Inventario extends AppCompatActivity {
         BEliminar=(Button)findViewById(R.id.BgEliminar);
         BBuscar=(Button)findViewById(R.id.BgBuscar);
         BNuevo=(Button)findViewById(R.id.BgNuevo);
+        BListar=(Button)findViewById(R.id.BgListar);
 
         ETNombre=(EditText)findViewById(R.id.ETgNombre);
         ETDescripcion=(EditText)findViewById(R.id.ETgDescripcion);
@@ -126,6 +129,15 @@ public class agregar_Inventario extends AppCompatActivity {
                 titulo.show();
             }
         });
+
+        BListar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), listar_inventario.class);
+                startActivityForResult(intent,0);
+            }
+        });
+
     }
 
     private void NuevoArticulo(String URL) {
