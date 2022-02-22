@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -24,31 +25,22 @@ public class recycler_planes extends AppCompatActivity implements Response.Error
 
     RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
-    ArrayList <ListaPlanes> elements;
+    ArrayList <ListaPlanes> elements = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recicler_planes);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        init();
-    }
-
-    public void init(){
-        elements = new ArrayList<>();
-        elements.add(new ListaPlanes("plan de emergencia","no pues la neta no supe que mas poner al chile XD "));
         buscadorPlanes();
 
-        listAdapter listAdapter = new listAdapter(elements,this);
-        RecyclerView recyclerView = findViewById(R.id.list_recicler_planes);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(listAdapter);
 
     }
 
+
+
     public void buscadorPlanes(){
-        String url = "https://softortilla.000webhostapp.com/Servicios/buscarPlan.php?IdPlan=%22Rossnok%22";
+        String url = "https://softortilla.000webhostapp.com/Servicios/buscarPlan.php?IdUsuario=Rossnok";
 
         request = Volley.newRequestQueue(getApplicationContext());
         jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url,null,this,this);//preparacion de la sentencia
@@ -66,15 +58,22 @@ public class recycler_planes extends AppCompatActivity implements Response.Error
         JSONArray json = response.optJSONArray("usuario");//instancia del array de tipo json que almacenara los datos obtenidos de la respues del web service
         JSONObject objet;//instancia de un objeto de tipo json
 
-        //obtencion de los valores del plan y posterior muestra en los recycler//
-       for(int i = 0;i < json.length();i++){
+        for(int i = 0; i<json.length();i++){
            try {
                objet = Objects.requireNonNull(json).getJSONObject(i);
-               elements.add(new ListaPlanes(objet.optString("asdad"),objet.optString("adasd")));
+               elements.add(new ListaPlanes(objet.optString("nombrePlan"),objet.optString("descripcionPlan")));
+               elements.add(new ListaPlanes(String.valueOf(json.length()),"no se que mas poner"));
 
            } catch (JSONException e) {
                e.printStackTrace();
            }
-       }
+
+        }
+
+        listAdapter listAdapter = new listAdapter(elements,this);
+        RecyclerView recyclerView = findViewById(R.id.list_recicler_planes);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(listAdapter);
     }
 }

@@ -64,9 +64,7 @@ public class planesPreventivos extends AppCompatActivity implements Response.Err
     }*/
 
     private void inserter_plan() {
-        String url = "https://softortilla.000webhostapp.com/Servicios/insertarPlan.php?nombrePlan"+nombre.getText().toString()+"&descripcionPlan"+descripccion.getText().toString()+"&IdUsuario=Rossnok";//queda pendiente la variable de donde se obtendra el nombre de usuario
-
-        url = url.replace(" ","%20");
+        String url = "https://softortilla.000webhostapp.com/Servicios/insertarPlan.php?nombrePlan="+nombre.getText().toString()+"&descripcionPlan="+descripccion.getText().toString()+"&IdUsuario=Rossnok";//queda pendiente la variable de donde se obtendra el nombre de usuario
 
         request = Volley.newRequestQueue(getApplicationContext());
         jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url,null,
@@ -78,7 +76,7 @@ public class planesPreventivos extends AppCompatActivity implements Response.Err
 
     @Override
     public void onErrorResponse(VolleyError error) {
-
+        Toast.makeText(this,error.toString(),Toast.LENGTH_SHORT);
     }
 
     @Override
