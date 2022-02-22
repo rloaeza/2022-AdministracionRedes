@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     //Josue Garcia
 
     //Declarar los objetos
+
     private var ETUser: EditText? = null
     private var ETPass: EditText? = null
     //private val BIngresar: Button? = null
@@ -37,8 +38,8 @@ class MainActivity : AppCompatActivity() {
         ETUser = findViewById<View>(R.id.ETgUser) as EditText
         ETPass = findViewById<View>(R.id.ETgPass) as EditText
 
-        var valor = Intent(this, recicler_listar::class.java);
-        startActivity(valor);
+        /*var valor = Intent(this, recicler_listar::class.java);
+        startActivity(valor);*/
 
     }
 

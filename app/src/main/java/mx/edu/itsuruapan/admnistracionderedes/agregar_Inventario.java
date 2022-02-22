@@ -133,7 +133,7 @@ public class agregar_Inventario extends AppCompatActivity {
         BListar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), listar_inventario.class);
+                Intent intent = new Intent(v.getContext(), recicler_listar.class);
                 startActivityForResult(intent,0);
             }
         });
