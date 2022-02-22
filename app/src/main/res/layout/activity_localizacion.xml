@@ -25,27 +25,42 @@
         app:layout_constraintVertical_bias="0.084" />
 
     <ImageView
-        android:id="@+id/imageViewId"
+        android:id="@+id/imageView"
         android:layout_width="329dp"
         android:layout_height="308dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.256"
+        app:layout_constraintVertical_bias="0.16"
         app:srcCompat="@android:drawable/ic_menu_mapmode" />
 
     <Button
-        android:id="@+id/btnCargaImg"
+        android:id="@+id/insert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/boton_redondeado"
-        android:text="Cargar Mapa/Imagen"
-        android:textSize="24sp"
         android:onClick="onclick"
+        android:text="Subirr Mapa/Imagen"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewId" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <Button
+        android:id="@+id/get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cargar mapa/imagen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insert"
+        app:layout_constraintVertical_bias="0.326"
+        tools:textSize="24sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
