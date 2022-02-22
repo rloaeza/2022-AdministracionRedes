@@ -33,8 +33,6 @@ public class recycler_planes extends AppCompatActivity implements Response.Error
         setContentView(R.layout.activity_recicler_planes);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         buscadorPlanes();
-
-
     }
 
 
@@ -55,14 +53,13 @@ public class recycler_planes extends AppCompatActivity implements Response.Error
 
     @Override
     public void onResponse(JSONObject response) {
-        JSONArray json = response.optJSONArray("usuario");//instancia del array de tipo json que almacenara los datos obtenidos de la respues del web service
-        JSONObject objet;//instancia de un objeto de tipo json
+        JSONArray json = response.optJSONArray("usuario");
+        JSONObject objet;
 
         for(int i = 0; i<json.length();i++){
            try {
                objet = Objects.requireNonNull(json).getJSONObject(i);
                elements.add(new ListaPlanes(objet.optString("nombrePlan"),objet.optString("descripcionPlan")));
-               elements.add(new ListaPlanes(String.valueOf(json.length()),"no se que mas poner"));
 
            } catch (JSONException e) {
                e.printStackTrace();
