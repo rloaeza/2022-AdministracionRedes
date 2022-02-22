@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AdmnistracionDeRedes">
         <activity
+            android:name=".recicler_listar"
+            android:exported="false" />
+        <activity
             android:name=".listar_inventario"
             android:exported="false" />
         <activity
