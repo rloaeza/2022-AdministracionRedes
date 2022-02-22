@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     private var ETUser: EditText? = null
     private var ETPass: EditText? = null
+
     //private val BIngresar: Button? = null
 
     //private lateinit var appBarConfiguration: AppBarConfiguration
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         ETUser = findViewById<View>(R.id.ETgUser) as EditText
         ETPass = findViewById<View>(R.id.ETgPass) as EditText
 
-        /*var valor = Intent(this, recicler_listar::class.java);
+     /*   var valor = Intent(this, recycler_planes::class.java);
         startActivity(valor);*/
 
     }
@@ -72,7 +73,11 @@ class MainActivity : AppCompatActivity() {
                 val parametros: MutableMap<String, String> = HashMap()
                 parametros["email"] = ETUser!!.text.toString()
                 parametros["contrasena"] = ETPass!!.text.toString()
+                val value =  credenciales_Usuario()
+                value.setUsuarioIngresado("")
+                value.setUsuarioIngresado(ETUser!!.text.toString())
                 return parametros
+
             }
         }
         val requestQueue = Volley.newRequestQueue(this)

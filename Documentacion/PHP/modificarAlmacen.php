@@ -2,11 +2,12 @@
     require_once "conex.php";
     $conexion=conex();
     
-$IdProducto = $_REQUEST["IdAlmacen"];
+$IdAlmacen = $_REQUEST["IdAlmacen"];
     $nombre= $_REQUEST['nombre'];
     $descripcion= $_REQUEST['descripcion'];
     $cantidad= $_REQUEST['cantidad'];
     $categoria= $_REQUEST['categoria'];
+    //$IdUsuario= $_REQUEST['IdUsuario'];
     
     $registros=array();
     

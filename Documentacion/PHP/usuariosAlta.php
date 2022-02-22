@@ -2,8 +2,8 @@
     require_once "conex.php";
     $conexion=conex();
     
-    $email - $_REQUEST["email"];
-    $contrasena - $_REQUEST["contraseña"];
+    $email=$_REQUEST["email"];
+    $contrasena=$_REQUEST["contrasena"];
     
     $registros=array();
     
@@ -18,4 +18,3 @@
     catch(Exception $e){ echo "error"; }
     
 ?>
-

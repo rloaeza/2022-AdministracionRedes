@@ -6,10 +6,11 @@
     $descripcion= $_REQUEST['descripcion'];
     $cantidad= $_REQUEST['cantidad'];
     $categoria= $_REQUEST['categoria'];
+    $IdUsuario= $_REQUEST['IdUsuario'];
     
     $registros=array();
     
-    $sql="INSERT INTO Almacen (nombre,descripcion,cantidad,categoria) VALUES('$nombre','$descripcion','$cantidad','$categoria')";
+    $sql="INSERT INTO Almacen (nombre,descripcion,cantidad,categoria,IdUsuario) VALUES('$nombre','$descripcion','$cantidad','$categoria','$IdUsuario')";
     try{
         $ejecutar = mysqli_query($conexion,$sql);
         $registros["resultados"]=true;

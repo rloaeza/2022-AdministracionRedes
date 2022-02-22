@@ -5,10 +5,10 @@
         
         $json=array();
         
-        if(isset($_GET["IdAlmacen"])){
-            $IdAlmacen=$_GET["IdAlmacen"];
+        if(isset($_GET["IdPlan"])){
+            $IdPlan=$_GET["IdPlan"];
             
-            $sql="DELETE FROM Almacen WHERE IdPrueba='{$IdAlmacen}'";
+            $sql="DELETE FROM Almacen WHERE IdAlmacen='{$IdPlan}'";
             $stm=$conexion->prepare($sql);
             
             if($stm->execute()){
