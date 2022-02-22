@@ -43,6 +43,8 @@ public class agregar_Inventario extends AppCompatActivity {
     EditText ETCategoria;
     EditText ETid;
 
+    credenciales_Usuario usuarioIngresado = new credenciales_Usuario();
+
     RequestQueue requestQueue;
 
     @Override
@@ -63,6 +65,8 @@ public class agregar_Inventario extends AppCompatActivity {
         ETCantidad=(EditText)findViewById(R.id.ETgCantidad);
         ETCategoria=(EditText)findViewById(R.id.ETgCategoria);
         ETid=(EditText)findViewById(R.id.ETgId);
+
+
 
         BNuevo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +94,7 @@ public class agregar_Inventario extends AppCompatActivity {
         BBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ETid.length()!=0){ Buscar("https://softortilla.000webhostapp.com/Servicios/buscarAlmacen.php?IdAlmacen="+ETid.getText()+""); }
+                if(ETid.length()!=0){ Buscar("https://softortilla.000webhostapp.com/Servicios/buscarAlmacen.php?IdAlmacen="+ETid.getText()+"&IdUsuario="+usuarioIngresado.getUsuarioIngresado()); }
                 else{ Toast.makeText(getApplicationContext(),"Ingrese un ID",Toast.LENGTH_SHORT).show(); }
             }
         });
@@ -164,6 +168,7 @@ public class agregar_Inventario extends AppCompatActivity {
                 parametros.put("descripcion",(ETDescripcion.getText().toString()));
                 parametros.put("cantidad",(ETCantidad.getText().toString()));
                 parametros.put("categoria",(ETCategoria.getText().toString()));
+                parametros.put("IdUsuario", (usuarioIngresado.getUsuarioIngresado()));
                 return parametros;
             }
         };

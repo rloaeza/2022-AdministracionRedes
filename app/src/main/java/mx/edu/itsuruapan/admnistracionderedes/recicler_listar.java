@@ -28,8 +28,6 @@ public class recicler_listar extends AppCompatActivity implements Response.Error
     RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
     ArrayList<ListElementListar> elements = new ArrayList<>();
-    Button btnUsuer;
-    TextView txtUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +35,8 @@ public class recicler_listar extends AppCompatActivity implements Response.Error
         setContentView(R.layout.activity_recicler_listar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         buscarAlmacen();
-        txtUser.findViewById(R.id.textListar);
-        btnUsuer.findViewById(R.id.botonListar);
+
+        credenciales_Usuario usuarioIngreso = new credenciales_Usuario();
 
         //init();
     }
@@ -57,7 +55,7 @@ public class recicler_listar extends AppCompatActivity implements Response.Error
 
     public void buscarAlmacen(){
 
-        String url = "https://softortilla.000webhostapp.com/Servicios/buscarAlmacenListar.php?IdUsuario=fercho";
+        String url = "https://softortilla.000webhostapp.com/Servicios/buscarAlmacenListar.php?IdUsuario="+credenciales_Usuario.usuarioIngresado;
 
         request = Volley.newRequestQueue(getApplicationContext());
         jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, this, this);

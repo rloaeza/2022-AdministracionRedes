@@ -18,7 +18,8 @@
         android:requestLegacyExternalStorage="true">
         <activity
             android:name=".recicler_listar"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".agregar_Inventario"/>
         <activity
             android:name=".reportar"
             android:exported="false"
