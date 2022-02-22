@@ -32,11 +32,24 @@ public class recicler_listar extends AppCompatActivity implements Response.Error
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recicler_listar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        buscadorAlmacen();
+        buscarAlmacen();
 
+        //init();
     }
 
-    public void buscadorAlmacen(){
+    public void init(){
+        elements.add(new ListElementListar("1", "prueba", "esto es una prueba", "20", "null", "fercho0"));
+        elements.add(new ListElementListar("1", "prueba", "esto es una prueba", "20", "null", "fercho0"));
+        elements.add(new ListElementListar("1", "prueba", "esto es una prueba", "20", "null", "fercho0"));
+
+        ListAdapterListar ListAdapterListar = new ListAdapterListar(elements,this);
+        RecyclerView recyclerView = findViewById(R.id.idrecycler);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(ListAdapterListar);
+    }
+
+    public void buscarAlmacen(){
 
         String url = "https://softortilla.000webhostapp.com/Servicios/buscarAlmacenListar.php?IdUsuario=fercho";
 
@@ -58,19 +71,18 @@ public class recicler_listar extends AppCompatActivity implements Response.Error
         for(int i = 0; i<json.length();i++){
             try{
                 object = Objects.requireNonNull(json).getJSONObject(i);
-                elements.add(new ListElementListar(object.optString("IdAlmacen"), object.optString("nombre"), object.optString("descripcion")
-                        , object.optString("cantidad"), object.optString("categoria"), object.optString("IdUsuario")));
+                elements.add(new ListElementListar(object.optString("IdAlmacen"),object.optString("nombre"),object.optString("descripcion"),object.optString("cantidad"),object.optString("categoria"),object.optString("IdUsuario")));
 
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
 
-        ListAdapterListar listAdapter = new ListAdapterListar(elements,this);
+        ListAdapterListar ListAdapterListar = new ListAdapterListar(elements,this);
         RecyclerView recyclerView = findViewById(R.id.idrecycler);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(listAdapter);
+        recyclerView.setAdapter(ListAdapterListar);
 
     }
 }
