@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -26,6 +28,8 @@ public class recicler_listar extends AppCompatActivity implements Response.Error
     RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
     ArrayList<ListElementListar> elements = new ArrayList<>();
+    Button btnUsuer;
+    TextView txtUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,8 @@ public class recicler_listar extends AppCompatActivity implements Response.Error
         setContentView(R.layout.activity_recicler_listar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         buscarAlmacen();
+        txtUser.findViewById(R.id.textListar);
+        btnUsuer.findViewById(R.id.botonListar);
 
         //init();
     }

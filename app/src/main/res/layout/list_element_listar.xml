@@ -23,11 +23,10 @@
 
             <TextView
                 android:id="@+id/idAlm"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="2dp"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="361dp"
                 android:layout_marginBottom="2dp"
                 android:clickable="false"
                 android:text="id">
@@ -39,15 +38,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="303dp"
+                android:layout_marginEnd="307dp"
+                android:clickable="false"
                 android:text="Nombre" />
 
             <TextView
                 android:id="@+id/desAlm"
-                android:layout_width="158dp"
+                android:layout_width="148dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="146dp"
+                android:layout_marginEnd="151dp"
+                android:clickable="false"
                 android:text="Descripcion" />
 
             <TextView
@@ -56,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="123dp"
+                android:clickable="false"
                 android:text="Can" />
 
             <TextView
@@ -64,6 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="55dp"
+                android:clickable="false"
                 android:text="Categoria" />
 
             <TextView
@@ -72,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="4dp"
+                android:clickable="false"
                 android:text="us" />
 
         </RelativeLayout>
