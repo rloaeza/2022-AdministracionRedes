@@ -22,7 +22,8 @@
         <activity
             android:name=".reportar"
             android:exported="false"
-            android:parentActivityName=".configuracion" />
+            android:parentActivityName=".configuracion"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".planesPreventivos"
             android:exported="false"
