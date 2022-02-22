@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class ListAdapterListar extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
+public class ListAdapterListar extends RecyclerView.Adapter<ListAdapterListar.ViewHolder> {
     private List<ListElementListar> mData;
     private LayoutInflater mInflater;
     private Context context;
@@ -27,9 +27,9 @@ public class ListAdapterListar extends RecyclerView.Adapter<ListAdapter.ViewHold
     public int getItemCount(){return mData.size();}
 
     @Override
-    public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public ListAdapterListar.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View view = mInflater.inflate(R.layout.list_element_listar, null);
-        return new ListAdapter.ViewHolder(view);
+        return new ListAdapterListar.ViewHolder(view);
     }
 
     @Override
