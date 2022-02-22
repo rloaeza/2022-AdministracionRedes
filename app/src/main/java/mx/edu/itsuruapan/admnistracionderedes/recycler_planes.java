@@ -33,16 +33,16 @@ public class recycler_planes extends AppCompatActivity implements Response.Error
         setContentView(R.layout.activity_recicler_planes);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         buscadorPlanes();
+
+
     }
-
-
 
     public void buscadorPlanes(){
         String url = "https://softortilla.000webhostapp.com/Servicios/buscarPlan.php?IdUsuario=Rossnok";
 
         request = Volley.newRequestQueue(getApplicationContext());
-        jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url,null,this,this);//preparacion de la sentencia
-        request.add(jsonObjectRequest);// ejecucion de la sentencia y obtencion de la respuesta por parte del web service
+        jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url,null,this,this);
+        request.add(jsonObjectRequest);
 
     }
 
