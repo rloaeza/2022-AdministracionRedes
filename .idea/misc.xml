@@ -3,26 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/CC/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_localizacion.xml" value="0.25" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_agregar_inventario.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_agregar_usuario.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_configuracion.xml" value="0.1" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_fallas.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_localizacion.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_menu.xml" value="0.18" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_modificar_inventario.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_planes_pre_cor2.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_registro.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/content_main.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/fallas.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/fragment_first.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/fragment_registro.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/fragment_second.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/list_pd.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Miguel/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/login.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/drawable/boton_redondeado.xml" value="0.1985" />
+        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_fallas.xml" value="0.17798913043478262" />
         <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/login.xml" value="0.25" />
+        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_menu.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_recicler_listar.xml" value="0.5" />
+        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/activity_recicler_planes.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/fallas.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/list_element_listar.xml" value="0.25" />
+        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/login.xml" value="0.33" />
+        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/layout/registro.xml" value="0.1" />
+        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/menu/drawer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/klio_/AndroidStudioProjects/2022-AdministracionRedes/app/src/main/res/menu/menu_main.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.13728470111448834" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.1" />
