@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -27,7 +26,7 @@ public class recycler_planes extends AppCompatActivity implements Response.Error
     RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
     ArrayList <ListaPlanes> elements = new ArrayList<>();
-
+    credenciales_Usuario usuarioIngresado = new credenciales_Usuario();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +39,7 @@ public class recycler_planes extends AppCompatActivity implements Response.Error
     }
 
     public void buscadorPlanes(){
-        String url = "https://softortilla.000webhostapp.com/Servicios/buscarPlan.php?IdUsuario=Rossnok";
+        String url = "https://softortilla.000webhostapp.com/Servicios/buscarPlan.php?IdUsuario="+usuarioIngresado.getUsuarioIngresado();
 
         request = Volley.newRequestQueue(getApplicationContext());
         jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url,null,this,this);

@@ -2,6 +2,7 @@ package mx.edu.itsuruapan.admnistracionderedes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class planesPreventivos extends AppCompatActivity implements Response.Err
     TextView descripccion;
     RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
+    credenciales_Usuario usuarioIngresado = new credenciales_Usuario();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,16 +41,21 @@ public class planesPreventivos extends AppCompatActivity implements Response.Err
 
         btn_insertar.setOnClickListener(v -> inserter_plan());
         btn_editar.setOnClickListener(v -> editer_plan());
+
     }
 
     private void editer_plan() {
-        String url = "https://softortilla.000webhostapp.com/Servicios/modificarPlanes.php?";
+        //String url = "https://softortilla.000webhostapp.com/Servicios/modificarPlanes.php?";
 
-        url = url.replace(" ","%20");
+       // url = url.replace(" ","%20");
 
-        request = Volley.newRequestQueue(getApplicationContext());
-        jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url,null,this,this);
-        request.add(jsonObjectRequest);
+        //request = Volley.newRequestQueue(getApplicationContext());
+        //jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url,null,this,this);
+
+        //request.add(jsonObjectRequest);
+
+        Intent valor = new Intent(this, recycler_planes.class);
+        startActivity(valor);
 
     }
 
@@ -64,7 +71,7 @@ public class planesPreventivos extends AppCompatActivity implements Response.Err
     }*/
 
     private void inserter_plan() {
-        String url = "https://softortilla.000webhostapp.com/Servicios/insertarPlan.php?nombrePlan="+nombre.getText().toString()+"&descripcionPlan="+descripccion.getText().toString()+"&IdUsuario=Rossnok";//queda pendiente la variable de donde se obtendra el nombre de usuario
+        String url = "https://softortilla.000webhostapp.com/Servicios/insertarPlan.php?nombrePlan="+nombre.getText().toString()+"&descripcionPlan="+descripccion.getText().toString()+"&IdUsuario="+usuarioIngresado.getUsuarioIngresado();//queda pendiente la variable de donde se obtendra el nombre de usuario
 
         request = Volley.newRequestQueue(getApplicationContext());
         jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url,null,
@@ -81,6 +88,7 @@ public class planesPreventivos extends AppCompatActivity implements Response.Err
 
     @Override
     public void onResponse(JSONObject response) {
-
+        nombre.setText("");
+        descripccion.setText("");
     }
 }
