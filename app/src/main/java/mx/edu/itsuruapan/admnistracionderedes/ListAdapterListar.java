@@ -48,7 +48,7 @@ public class ListAdapterListar extends RecyclerView.Adapter<ListAdapterListar.Vi
             name = itemView.findViewById(R.id.nombreAlm);
             description = itemView.findViewById(R.id.desAlm);
             cuantity = itemView.findViewById(R.id.canAlm);
-            clas = itemView.findViewById(R.id.canAlm);
+            clas = itemView.findViewById(R.id.catAlm);
             user = itemView.findViewById(R.id.idUsuarioAlmacen);
         }
         //algo
