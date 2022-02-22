@@ -9,15 +9,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="407dp"
-        android:layout_height="74dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FFFFFF"
-        android:orientation="horizontal"
+        android:layout_width="365dp"
+        android:layout_height="83dp"
 
+        android:layout_marginBottom="39dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/nombre_fallas"
@@ -36,52 +35,64 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="376dp"
-        android:layout_height="534dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="371dp"
+        android:layout_height="436dp"
+        android:layout_marginBottom="33dp"
         android:layout_weight="1"
         android:background="@color/white"
         android:backgroundTint="@color/white"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/lista_fallas"
             android:layout_width="25dp"
-            android:layout_gravity="center"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_weight="1"
             android:background="#72FBC603"
             android:text="@string/cargando"
             android:textSize="20sp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/boton_agregar"
-        android:layout_width="147dp"
-        android:layout_height="55dp"
-        android:backgroundTint="@color/colorAccent"
-        android:text="@string/agregar"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="635dp" />
-
-    <Button
-        android:id="@+id/boton_listar"
-        android:layout_width="143dp"
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="379dp"
         android:layout_height="52dp"
-        android:backgroundTint="@color/colorAccent"
-        android:text="@string/listar"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="250dp"
-        tools:layout_editor_absoluteY="635dp" />
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/boton_listar"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/listar"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/boton_agregar"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/agregar"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
