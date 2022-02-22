@@ -51,19 +51,20 @@ public class listAdapter extends RecyclerView.Adapter<listAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView iconImage;
-        TextView nombre, descripcion;
+        TextView nombre, descripcion, idUsuario;
 
                 ViewHolder(View viewItem){
                     super(viewItem);
                     iconImage = viewItem.findViewById(R.id.icono);
                     nombre = viewItem.findViewById(R.id.nombreTextView);
                     descripcion = viewItem.findViewById(R.id.desc_plan);
-
+                    idUsuario = viewItem.findViewById(R.id.idUsuario);
                 }
 
                 void binData(final ListaPlanes item){
                     nombre.setText(item.getNombre_plan());
                     descripcion.setText(item.getDescripcion_plan());
+                    idUsuario.setText(item.getIdUsuario());
 
                 }
     }

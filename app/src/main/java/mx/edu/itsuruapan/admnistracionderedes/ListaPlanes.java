@@ -3,10 +3,19 @@ package mx.edu.itsuruapan.admnistracionderedes;
 public class ListaPlanes {
     public String nombre_plan;
     public String descripcion_plan;
-
-    public ListaPlanes(String nombre_plan, String descripcion_plan) {
+    public String idUsuario;
+    public ListaPlanes(String nombre_plan, String descripcion_plan, String idUsuario) {
         this.nombre_plan = nombre_plan;
         this.descripcion_plan = descripcion_plan;
+        this.idUsuario = idUsuario;
+    }
+
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNombre_plan() {

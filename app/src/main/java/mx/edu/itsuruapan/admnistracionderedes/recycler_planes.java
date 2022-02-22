@@ -60,7 +60,7 @@ public class recycler_planes extends AppCompatActivity implements Response.Error
         for(int i = 0; i<json.length();i++){
            try {
                objet = Objects.requireNonNull(json).getJSONObject(i);
-               elements.add(new ListaPlanes(objet.optString("nombrePlan"),objet.optString("descripcionPlan")));
+               elements.add(new ListaPlanes(objet.optString("nombrePlan"),objet.optString("descripcionPlan"),"plan N"+objet.optString("IdPlan")));
 
            } catch (JSONException e) {
                e.printStackTrace();
