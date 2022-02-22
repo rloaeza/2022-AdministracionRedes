@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toStartOf="@+id/botonListar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintVertical_bias="0.118" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idrecycler"
