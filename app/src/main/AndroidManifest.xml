@@ -18,9 +18,6 @@
             android:name=".recicler_listar"
             android:exported="false" />
         <activity
-            android:name=".listar_inventario"
-            android:exported="false" />
-        <activity
             android:name=".reportar"
             android:exported="false"
             android:parentActivityName=".configuracion" />

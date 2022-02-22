@@ -28,8 +28,6 @@ public class recicler_listar extends AppCompatActivity implements Response.Error
     RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
     ArrayList<ListElementListar> elements = new ArrayList<>();
-    Button btnUsuer;
-    TextView txtUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,23 +35,9 @@ public class recicler_listar extends AppCompatActivity implements Response.Error
         setContentView(R.layout.activity_recicler_listar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         buscarAlmacen();
-        txtUser.findViewById(R.id.textListar);
-        btnUsuer.findViewById(R.id.botonListar);
 
-        //init();
     }
 
-    public void init(){
-        elements.add(new ListElementListar("1", "prueba", "esto es una prueba", "20", "null", "fercho0"));
-        elements.add(new ListElementListar("1", "prueba", "esto es una prueba", "20", "null", "fercho0"));
-        elements.add(new ListElementListar("1", "prueba", "esto es una prueba", "20", "null", "fercho0"));
-
-        ListAdapterListar ListAdapterListar = new ListAdapterListar(elements,this);
-        RecyclerView recyclerView = findViewById(R.id.idrecycler);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(ListAdapterListar);
-    }
 
     public void buscarAlmacen(){
 

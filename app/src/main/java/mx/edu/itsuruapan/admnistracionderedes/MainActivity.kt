@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity() {
         ETUser = findViewById<View>(R.id.ETgUser) as EditText
         ETPass = findViewById<View>(R.id.ETgPass) as EditText
 
-        var valor = Intent(this, recicler_listar::class.java);
-        startActivity(valor);
+        /*var valor = Intent(this, recicler_listar::class.java);
+        startActivity(valor);*/
 
     }
 
