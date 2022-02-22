@@ -22,6 +22,8 @@ public class localizacion extends AppCompatActivity {
     Button insert,get;
     ImageView imageView;
     DatabaseHelper db;
+    credenciales_Usuario usuario = new credenciales_Usuario();
+    String us;
     private static final int PICK_IMAGE=100;
 
     @Override
@@ -29,14 +31,14 @@ public class localizacion extends AppCompatActivity {
         try {
             Field field = CursorWindow.class.getDeclaredField("sCursorWindowSize");
             field.setAccessible(true);
-            field.set(null, 100 * 1024 * 1024); //the 100MB is the new size
+            field.set(null, 100 * 1024 * 1024);
         } catch (Exception e) {
 
             e.printStackTrace();
 
         }
         super.onCreate(savedInstanceState);
-
+        us=usuario.getUsuarioIngresado();
         setContentView(R.layout.activity_localizacion);
         insert = (Button)findViewById(R.id.insert);
         get = (Button)findViewById(R.id.get);
@@ -46,8 +48,8 @@ public class localizacion extends AppCompatActivity {
         get.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imageView.setImageBitmap(db.getImage(2));
-                if(db.getImage(2)!=null){
+                imageView.setImageBitmap(db.getImage(us));
+                if(db.getImage(us)!=null){
                     Toast.makeText(getApplicationContext(), "Realizado",Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(getApplicationContext(), "Error",Toast.LENGTH_SHORT).show();
@@ -57,8 +59,8 @@ public class localizacion extends AppCompatActivity {
         insert.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                if(db.getImage(2)!=null){
-                    db.deletImage(2);
+                if(db.getImage(us)!=null){
+                    db.deletImage(us);
                 }
                 Intent intent = new Intent(Intent.ACTION_PICK, Uri.parse(
                         "content://media/internal/images/media"
@@ -76,7 +78,7 @@ public class localizacion extends AppCompatActivity {
             Uri uri = data.getData();
             String x = getPath(uri);
 
-            if(db.insertImage(x)){
+            if(db.insertImage(x,us)){
                 Toast.makeText(getApplicationContext(), "Realizado",Toast.LENGTH_SHORT).show();
             }else {
                 Toast.makeText(getApplicationContext(), "Error",Toast.LENGTH_SHORT).show();

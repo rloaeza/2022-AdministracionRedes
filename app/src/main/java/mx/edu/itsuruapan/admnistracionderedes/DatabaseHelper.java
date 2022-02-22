@@ -20,7 +20,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE images (id integer primary key, img blob not null)");
+        db.execSQL("CREATE TABLE images (id integer primary key autoincrement,us text, img blob not null)");
         //System.out.println(BaseDeDatos.getPath());
     }
 
@@ -28,15 +28,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists images");
     }
-    public boolean insertImage(String x){
+
+    public boolean insertImage(String x, String us){
         SQLiteDatabase db = this.getWritableDatabase();
         try{
             FileInputStream fs = new FileInputStream(x);
             byte[] imgbyte = new byte[fs.available()];
             fs.read(imgbyte);
             ContentValues contentValues = new ContentValues();
-            contentValues.put("id","2");
+            //contentValues.put("id","2");
             contentValues.put("img", imgbyte);
+            contentValues.put("us", us);
             db.insert("images",null,contentValues);
             fs.close();
             return true;
@@ -46,21 +48,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public Bitmap getImage(Integer id){
+    public Bitmap getImage(String us){
         SQLiteDatabase db = this.getWritableDatabase();
         Bitmap bt = null;
-        Cursor cursor = db.rawQuery("select * from images where id=?",new String[]{String.valueOf(id)});
+        Cursor cursor = db.rawQuery("select * from images where us=?",new String[]{String.valueOf(us)});
         if(cursor.moveToNext()){
-            byte[] imag = cursor.getBlob(1);
+            byte[] imag = cursor.getBlob(2);
             bt = BitmapFactory.decodeByteArray(imag,0,imag.length);
         }
         return bt;
     }
 
-    public void deletImage(Integer i){
+    public void deletImage(String us){
         SQLiteDatabase db = this.getWritableDatabase();
         try{
-            db.execSQL("delete from images where id=?",new String[]{String.valueOf(i)});
+            db.execSQL("delete from images where us=?",new String[]{String.valueOf(us)});
         }catch(Exception e){
             e.printStackTrace();
         }finally{
