@@ -11,6 +11,7 @@ Lista de Personas que trabajaron en el proyecto y en que area trabajo.
 >Miguel Morfin Rodriguez
 -Diseño de estilos.
 -Creacion de codigo e interfaces para el apartado de inventarios, login, registrarse y menus.
+-Creacion, diseño y programacion basica de la pantalla configuracion.
 -Programacion de botones funcionales para la interfaz general.
 -Ayuda en la programacion de areas varias.
 
