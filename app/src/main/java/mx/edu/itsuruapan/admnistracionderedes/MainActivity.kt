@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     //Josue Garcia
 
     //Declarar los objetos
+
     private var ETUser: EditText? = null
     private var ETPass: EditText? = null
     //private val BIngresar: Button? = null
