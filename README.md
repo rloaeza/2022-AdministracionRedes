@@ -28,3 +28,7 @@ Lista de Personas que trabajaron en el proyecto y en que area trabajo.
 
 >Cristhian Jeordany Fonseca Pahua
 -Programacion de la pantalla Localizacion y todos sus recursos.
+
+>Isaac Naranjo Muñoz
+-Diseño de interfacez planes.
+-ayuda en ajustes de otras interfacez.
