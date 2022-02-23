@@ -32,3 +32,7 @@ Lista de Personas que trabajaron en el proyecto y en que area trabajo.
 >Isaac Naranjo Muñoz
 -Diseño de interfacez planes.
 -ayuda en ajustes de otras interfacez.
+
+>Carolina Pirita Alfaro
+-Diseño de interfaces y recicler view.
+-Programar la oreintacion de algunas ventanas.
