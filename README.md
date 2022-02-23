@@ -36,3 +36,7 @@ Lista de Personas que trabajaron en el proyecto y en que area trabajo.
 >Carolina Pirita Alfaro
 -Diseño de interfaces y recicler view.
 -Programar la oreintacion de algunas ventanas.
+
+>Jose Alberto Rodriguez Losuna
+-Diseño de logo.
+-Modificacion de algunas interfaces.
